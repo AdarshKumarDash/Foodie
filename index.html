@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.jpg">
+</head>
+
+<body onload="myFunction()">
+    <nav class="navbar-inverse" style="position: sticky; top: 0; z-index: 99999;">
+        <header>
+            <div class="navbar-header">
+                <button id="navbtn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="logo"><i class="fas fa-utensils"></i>Foodie</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mymenu">
+                <ul class="nav navbar-nav" id="nvbar">
+                    <li><a href="#home">Home</a></li>
+                    <li> <a href="#speciality">Speciality</a></li>
+                    <li> <a href="#popular">Popular</a></li>
+                    <li> <a href="#gallery">Gallery</a></li>
+                    <li> <a href="#review">Review</a></li>
+                    <li> <a href="#order">Order</a></li>
+                </ul>
+            </div>
+        </header>
+    </nav>
+    <div id="loading"></div>
+
+
+    <!---navbar end--->
+
+
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Food Made With Love</h3>
+            <p>George Bernard Shaw once said “there is no sincerer love than the love of food.” Food and eating often
+                bring with it a sense of community, a sense of happiness, and a sense of enjoyment.
+            </p>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+        <div class="image">
+            <img src="home-img.png">
+        </div>
+    </section>
+
+    <!---home page end--->
+
+
+    <section class="speciality" id="speciality">
+        <h1 class="hding">our <span>speciality</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img class="image" src="s-img-1.jpg">
+                <div class="content">
+                    <img src="s-1.png">
+                    <h3>tasty burger</h3>
+                    <p>A burger is a so tasty food. burger has some good specialities and some bad.
+                        Good specialities are this that it contain salad like tomato,cucumber,onion etc.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="s-img-2.jpg">
+                <div class="content">
+                    <img src="s-2.png">
+                    <h3>tasty pizza</h3>
+                    <p>The pizza itself looks so yummy, crispy and so cheesy. There is no better feeling in the world
+                        than a warm pizza box on your lap. My love for Pizza is very high.
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="s-img-3.jpg">
+                <div class="content">
+                    <img src="s-3.png">
+                    <h3>cold ice-cream</h3>
+                    <p>Ice cream is a sweetened frozen food typically eaten as a snack or dessert. It may be made from
+                        milk or cream and is flavoured with a sweetener, either sugar or an alternative, and a spice,
+                        such as cocoa or vanilla, or with fruit such as strawberries or peaches.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="s-img-4.jpg">
+                <div class="content">
+                    <img src="s-4.png">
+                    <h3>cold drinks</h3>
+                    <p>cold drinks is a liquid that comes from plants or fruit. The juice from fruit is often made
+                        into a drink. Some fruits that are often made into drinks are apple, orange, tomato, pineapple,
+                        grapefruit, guava, mango, passionfruit, watermelon, cranberry, grape, lemon and lime, but there
+                        are many others.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="s-img-5.jpg">
+                <div class="content">
+                    <img src="s-5.png">
+                    <h3>tasty sweets</h3>
+                    <p>India is a land of diversified culture and varied customs. It is a country of many different
+                        people, culture, customs , cusines and sweets.
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="s-img-6.jpg">
+                <div class="content">
+                    <img src="s-6.png">
+                    <h3>healthy breakfast</h3>
+                    <p>Healthy breakfast is extremely important to maintain healthy body and mind. It is a way of caring
+                        for ourselves and those we share breakfast with. Good energy stops us being distracted by hunger
+                        pangs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---speciality end--->
+
+    <section class="popular" id="popular">
+        <h1 class="hding">most <span>popular</span> foods</h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="price">₹65 - ₹100</span>
+                <img src="p-1.jpg">
+                <h3>tasty burger</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <br>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="price">₹600 - ₹800</span>
+                <img src="p-2.jpg">
+                <h3>tasty cake</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <br>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="price">₹500 - ₹600</span>
+                <img src="p-3.jpg">
+                <h3>tasty sweets and snacks</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <br>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="price">₹30 - ₹40</span>
+                <img src="p-4.jpg">
+                <h3>tasty cupcake</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <br>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="price">₹50 - ₹100</span>
+                <img src="p-5.jpg">
+                <h3>cold drinks</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <br>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="price">₹20 - ₹100</span>
+                <img src="p-6.jpg">
+                <h3>cold ice-cream</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <br>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---popular end--->
+
+
+    <section class="steps">
+        <div class="box">
+            <img src="step-1.jpg">
+            <h3>choose your favourite food</h3>
+        </div>
+        <div class="box">
+            <img src="step-2.jpg">
+            <h3>free and fast delivery</h3>
+        </div>
+        <div class="box">
+            <img src="step-3.jpg">
+            <h3>easy payment method</h3>
+        </div>
+        <div class="box">
+            <img src="step-4.jpg">
+            <h3>and finally, enjoy your food</h3>
+        </div>
+    </section>
+
+    <!---steps end--->
+
+
+    <section class="gallery" id="gallery">
+        <h1 class="hding">our food <span>gallery</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="g-1.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-2.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-3.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-4.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-5.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-6.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-7.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-8.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="g-9.jpg">
+                <div class="content">
+                    <h3>yummy food</h3>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Gallery end-->
+
+    <section class="review" id="review">
+        <h1 class="hding">our customers <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="pic1.png">
+                <h3>Florina</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>The Foddie and entire team members are very professional dedicating to the benefits of restaurant.
+                    They charge very very small fee for their service. I have recommended many restaurants to have their
+                    site with Foodie or the online order link.</p>
+            </div>
+            <div class="box">
+                <img src="pic2.png">
+                <h3>George</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Best application when you are hungry and want to have something delicious. At comfort of your
+                    zone.But can be more better by adding more vendors to their list. Could also add tracking of the
+                    delivery person.</p>
+            </div>
+            <div class="box">
+                <img src="pic3.png">
+                <h3>Laquetta</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Foodie is one of the best platforms that offers an easy user interface for ordering food. There is
+                    nothing to dislike about Foodie; the only thing they can do is continue to improve their platform
+                    and add more exciting features to enjoy a loyal customer base.</p>
+            </div>
+        </div>
+        <center>
+            <br>
+            <a class="morebtn" href="morereview.html" target="_blank">See More</a>
+            <a style="width: 100%; margin-top: 20px;" href="morereview.html" target="_blank" class="btn">write your own review</a>
+        </center>
+    </section>
+
+    <!---review end--->
+
+
+    <section class="order" id="order">
+        <h1 class="hding"><span>order</span> now</h1>
+        <div class="row">
+            <div class="image">
+                <img src="order-img.jpg">
+            </div>
+            <form action="">
+                <div class="inputBox">
+                    <input id="name" type="text" placeholder="Name" class="form-control">
+                    <input id="email" type="email" placeholder="Email" class="form-control">
+                </div>
+                <div class="inputBox">
+                    <input id="number" type="number" placeholder="Number" class="form-control">
+                    <input id="fdname" type="text" placeholder="Food Name" class="form-control">
+                </div>
+                <h3>Payment Method</h3>
+                <input class="form-control" value="Cash On delivery (COD)" readonly type="text">
+                <textarea id="adrs" class="form-control" placeholder="Address"></textarea>
+                <div onclick="order()" class="btn">Order Now</div>
+            </form>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
