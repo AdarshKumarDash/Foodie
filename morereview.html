@@ -74,18 +74,36 @@
                 <img src="review image.png">
             </div>
             <form action="">
-                <div class="inputBox">
-                    <input style="width: 100%;" id="name" type="text" placeholder="Name" class="form-control">
+                <div class="container">
+                        <div class="star-widget">
+                            <div class="starsdfg">
+                                <center>
+                            <input type="radio" name="rate" id="rate-5">
+                            <label for="rate-5" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-4">
+                            <label for="rate-4" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-3">
+                            <label for="rate-3" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-2">
+                            <label for="rate-2" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-1">
+                            <label for="rate-1" class="fas fa-star"></label>
+                            </center>
+                            </div>
+                            <br><br><br>
+                            <form action="#">
+                                <h3 id="ratingcom">I don't like it</h3>
+                                <div class="textarea">
+                                    <textarea class="form-control" cols="30" placeholder="Describe Your Experience..."></textarea>
+                                </div>
+                                <center>
+                                <div class="btndiv">
+                                    <div onclick="post()" class="btn">Post</div>
+                                </div>
+                                </center>
+                            </form>
+                        </div>
                 </div>
-                <div class="star">
-                    <i class="far fa-star star1"></i>
-                    <i class="far fa-star star2"></i>
-                    <i class="far fa-star star3"></i>
-                    <i class="far fa-star star4"></i>
-                    <i class="far fa-star star5"></i>
-                </div>
-                <textarea id="describe" class="form-control" placeholder="Describe Your Experience"></textarea>
-                <div style="width: 150px;" onclick="post()" class="btn">Post</div>
             </form>
         </div>
     </section>
