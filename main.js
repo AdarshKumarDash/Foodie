@@ -57,16 +57,6 @@ function order() {
       }
 }
 
-function getData() {
-      firebase.database().ref("/" + room_name).on('value', function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                  childKey = childSnapshot.key;
-                  childData = childSnapshot.val();
-            });
-      });
-}
-getData();
-
 function myFunction() {
       var preloader = document.getElementById("loading");
       preloader.style.display = "none";
@@ -80,4 +70,22 @@ function post() {
       } else {
             window.alert("You Have Successfully Post Your Review.")
       }
+}
+
+function mufunc5() {
+      document.getElementById("ratingcom").innerHTML = "I just Hate it";
+}
+
+function mufunc4() {
+      document.getElementById("ratingcom").innerHTML = "I don't like it";
+}
+
+function mufunc3() {
+      document.getElementById("ratingcom").innerHTML = "It is awesome";
+}
+function mufunc2() {
+      document.getElementById("ratingcom").innerHTML = "I just like it";
+}
+function mufunc() {
+      document.getElementById("ratingcom").innerHTML = "I just love it";
 }

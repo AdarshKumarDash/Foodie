@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reviewpage.css">
     <link rel="icon" href="icon.jpg">
 </head>
 
@@ -70,29 +71,25 @@
     <section class="order" id="order">
         <h1 class="hding">write<span> your review</span></h1>
         <div class="row">
-            <div class="image">
-                <img src="review image.png">
-            </div>
-            <form action="">
                 <div class="container">
                         <div class="star-widget">
                             <div class="starsdfg">
                                 <center>
-                            <input type="radio" name="rate" id="rate-5">
+                            <input onclick="mufunc()" type="radio" name="rate" id="rate-5">
                             <label for="rate-5" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-4">
+                            <input onclick="mufunc2()" type="radio" name="rate" id="rate-4">
                             <label for="rate-4" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-3">
+                            <input onclick="mufunc3()" type="radio" name="rate" id="rate-3">
                             <label for="rate-3" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-2">
+                            <input onclick="mufunc4()" type="radio" name="rate" id="rate-2">
                             <label for="rate-2" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-1">
+                            <input onclick="mufunc5()" type="radio" name="rate" id="rate-1">
                             <label for="rate-1" class="fas fa-star"></label>
                             </center>
                             </div>
-                            <br><br><br>
                             <form action="#">
-                                <h3 id="ratingcom">I don't like it</h3>
+                                <br><br>
+                                <h3 id="ratingcom"></h3>
                                 <div class="textarea">
                                     <textarea class="form-control" cols="30" placeholder="Describe Your Experience..."></textarea>
                                 </div>
@@ -104,7 +101,6 @@
                             </form>
                         </div>
                 </div>
-            </form>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
